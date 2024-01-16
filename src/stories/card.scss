@@ -1,0 +1,49 @@
+.hk-card {
+  &--newsletter {
+    margin: 10px;
+    padding-bottom: 22px;
+    width: 280px;
+
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08);
+    .hk-card-header {
+      display: flex;
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 10px 0 11px 15px;
+      width: 100%;
+      h3 {
+        font-size: 16px;
+        line-height: 27px;
+        text-align: left;
+      }
+      .day {
+        padding-right: 15px;
+        font-size: 12px;
+        color: #3ca488;
+      }
+    }
+
+    .hk-card-frame {
+      height: 139px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .hk-card-desc {
+      padding: 12px 0 22px;
+      font-size: 14px;
+      line-height: 20px;
+      height: 75px;
+      color: #666;
+    }
+  }
+}
