@@ -1,0 +1,14 @@
+@import "./normalize.scss";
+
+@font-face {
+  font-family: "Pretendard-Variable";
+  font-style: normal;
+  src: local("Pretendard-Variable"),
+    url(../../font/Pretendard-Variable.woff2) format("woff2");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Pretendard-Variable";
+}

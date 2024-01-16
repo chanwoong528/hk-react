@@ -22,20 +22,20 @@ const PG_LIST = PAGE_LIST.reduce((acc, currentObject) => {
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "./",
-
   root,
-  // publicDir: "assets",
+  publicDir: "../public",
   plugins: [react(), cssInjectedByJsPlugin({ relativeCSSInjection: true })],
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "/styles/normalize.scss";`,
+        additionalData: `@import "./src/styles/global.scss";`,
       },
     },
   },
   build: {
     modulePreload: false,
     outDir,
+    copyPublicDir: true,
     emptyOutDir: true,
     preserveModules: true,
     rollupOptions: {

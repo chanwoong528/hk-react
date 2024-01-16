@@ -22,23 +22,19 @@ const config: StorybookConfig = {
   core: {
     builder: "@storybook/builder-vite",
   },
-  // async viteFinal(config) {
-  //   return mergeConfig(config, {
-  //     css: {
-  //       postcss: null,
-  //       preprocessorOptions: {
-  //         scss: {
-  //           // additionalData: `@use "/styles/normalize.scss";`,
-  //           additionalData: `
-  //                       @use "${path.resolve(
-  //                         __dirname,
-  //                         "../src/styles/normalize.scss"
-  //                       )}";
-  //                   `,
-  //         },
-  //       },
-  //     },
-  //   });
-  // },
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      css: {
+        postcss: null,
+        preprocessorOptions: {
+          scss: {
+            additionalData: `
+                        @import  "../src/styles/global.scss";
+                    `,
+          },
+        },
+      },
+    });
+  },
 };
 export default config;

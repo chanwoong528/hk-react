@@ -18,6 +18,12 @@ export const NEWSLETTER_CODE = {
   woorimal: "woorimal",
 };
 
+export const NEWSLETTER_STATUS = {
+  DEFAULT: "default",
+  SUBSCRIBED: "subscribed",
+  FINISHED: "finished",
+};
+
 export const NEWSLETTER_LIST = [
   {
     code: NEWSLETTER_CODE.europelife,
@@ -163,5 +169,66 @@ export const NEWSLETTER_LIST = [
       import.meta.url
     ).href,
     listType: "interest",
+  },
+
+  {
+    code: NEWSLETTER_CODE.memorial,
+    title: "가만한 당신, 못다 한 말들",
+    day: "금요일",
+    desc: "흩어지고 달아나려는 ‘가만한 당신'의<br>언저리 이야기를 전합니다. ",
+    type: "newsletter",
+    imgSrc: new URL(
+      `../../assets/image/newsletter/cardBg/newjam_cate_${NEWSLETTER_CODE.memorial}.png`,
+      import.meta.url
+    ).href,
+    listType: NEWSLETTER_STATUS.FINISHED,
+  },
+  {
+    code: NEWSLETTER_CODE.insight,
+    title: "이충재의 인사이트",
+    day: "금요일",
+    desc: "이충재 주필이 엄선한 화두와 칼럼을 주중<br>매일 오전 7시 보내드립니다.",
+    type: "newsletter",
+    imgSrc: new URL(
+      `../../assets/image/newsletter/cardBg/newjam_cate_${NEWSLETTER_CODE.insight}.png`,
+      import.meta.url
+    ).href,
+    listType: NEWSLETTER_STATUS.FINISHED,
+  },
+  {
+    code: NEWSLETTER_CODE.munhak,
+    title: "무낙: Munhak",
+    day: "금요일",
+    desc: "당신의 일상에 문학을 똑똑(knock knock)!<br>신선한 문학 소식을 배달합니다.",
+    type: "newsletter",
+    imgSrc: new URL(
+      `../../assets/image/newsletter/cardBg/newjam_cate_${NEWSLETTER_CODE.munhak}.png`,
+      import.meta.url
+    ).href,
+    listType: NEWSLETTER_STATUS.FINISHED,
+  },
+  {
+    code: NEWSLETTER_CODE.rabbit,
+    title: "토끼랑 산다",
+    day: "금요일",
+    desc: "토끼랑 동거 9년차 이순지 기자가<br>토끼의 세계를 전합니다.",
+    type: "newsletter",
+    imgSrc: new URL(
+      `../../assets/image/newsletter/cardBg/newjam_cate_${NEWSLETTER_CODE.rabbit}.png`,
+      import.meta.url
+    ).href,
+    listType: NEWSLETTER_STATUS.FINISHED,
+  },
+  {
+    code: NEWSLETTER_CODE.basic,
+    title: "옛 뉴잼",
+    day: "금요일",
+    desc: "뉴스 안에 담긴 시시콜몰<br>What, How, Why를 재밌고 알차게 전합니다.",
+    type: "newsletter",
+    imgSrc: new URL(
+      `../../assets/image/newsletter/cardBg/newjam_cate_${NEWSLETTER_CODE.basic}.png`,
+      import.meta.url
+    ).href,
+    listType: NEWSLETTER_STATUS.FINISHED,
   },
 ];

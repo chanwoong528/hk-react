@@ -1,0 +1,15 @@
+.newsletter-con {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 56px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    li {
+      flex-shrink: 0;
+    }
+  }
+}

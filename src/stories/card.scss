@@ -1,6 +1,6 @@
 .hk-card {
   &--newsletter {
-    margin: 10px;
+    // margin: 10px;
     padding-bottom: 22px;
     width: 280px;
 
@@ -44,6 +44,64 @@
       line-height: 20px;
       height: 75px;
       color: #666;
+    }
+    .hk-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .hk-card-footer-btn {
+        position: static;
+        display: inline-block;
+        margin: 0 4px;
+        padding: 0;
+        width: 84px;
+        line-height: 28px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #999;
+        border: 1px solid #999;
+        border-radius: 15px;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+          color: #333;
+          border-color: #333;
+        }
+        &.subs-btn {
+          color: #3ca488;
+          border-color: #3ca488;
+          &:hover {
+            background-color: #3ca488;
+            color: #fff;
+            &::after {
+              background: url("./assets/icon/icon_subsc_w.svg") no-repeat;
+              background-size: 100%;
+            }
+          }
+          &::after {
+            content: "";
+            display: inline-block;
+            margin-left: 2px;
+            width: 8px;
+            height: 8px;
+            background: url("./assets/icon/icon_subsc.svg") no-repeat;
+            background-size: 100%;
+            vertical-align: 1px;
+          }
+        }
+      }
+    }
+
+    &.finished {
+      .hk-card-header {
+        h3 {
+          color: #999;
+        }
+        .day {
+          color: #999;
+        }
+      }
     }
   }
 }

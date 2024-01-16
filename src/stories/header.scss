@@ -1,0 +1,33 @@
+.hk-header {
+  &--newsletter {
+    position: relative;
+    margin: 0 0 16px;
+    padding-top: 12px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #111;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #e2e2e2;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 47px;
+      height: 3px;
+      background: #3ca488;
+    }
+    &.finished {
+      &::before {
+        background: #999;
+      }
+    }
+  }
+}
