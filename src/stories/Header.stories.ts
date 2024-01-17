@@ -27,11 +27,13 @@ export const NewsLetterHeaderFinished: Story = {
   args: { type: "newsletter finished", title: "종료된 뉴스레터" },
 };
 
-// export const Secondary: Story = {
-//   args: {
-//     label: "Card",
-//   },
-// };
+export const NewsLetterHeaderTable: Story = {
+  args: {
+    type: "newsletter table",
+    title: "뉴스레터 편성표",
+    sub: "*는 격주 연재",
+  },
+};
 
 // export const Large: Story = {
 //   args: {

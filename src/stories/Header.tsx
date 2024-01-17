@@ -5,14 +5,18 @@ interface HeaderProps {
 
   type?: string;
   title?: string;
+  sub?: string;
 }
 
 
 export const Header = ({ type = "default",
-  title = "default", ...props }: HeaderProps) => {
+  title = "default", sub, ...props }: HeaderProps) => {
   return (
-    <h2 className={['hk-header', `hk-header--${type}`].join(' ')}
-      {...props}>{title}</h2>
+    <header className={['hk-header', `hk-header--${type}`].join(' ')}
+      {...props}>
+      <h2>{title}</h2>
+      {!!sub ? <span className='sub-title'>{sub}</span> : ""}
+    </header>
   )
 }
 

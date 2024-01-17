@@ -1,0 +1,54 @@
+.hk-table {
+  &--newsletter {
+    display: flex;
+
+    .day-wrap {
+      flex-shrink: 0;
+      width: calc(100% / 5);
+      border-bottom: 1px solid #111;
+      &.mon,
+      &.wed,
+      &.fri {
+        background: #f7fafb;
+      }
+      &:not(.fri) {
+        border-right: 1px dotted #ccc;
+        border-collapse: collapse;
+      }
+      h3 {
+        padding: 9px 10px;
+
+        color: #111;
+        font-size: 20px;
+        text-align: center;
+
+        background: #ebf0f8;
+        border-bottom: 1px solid #111;
+      }
+      ul {
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
+          min-height: 75px;
+          padding: 11px 10px;
+          border-bottom: 1px dotted #ccc;
+          span {
+            font-size: 16px;
+            color: #999;
+            font-weight: 500;
+            line-height: 26px;
+          }
+          h4 {
+            font-size: 18px;
+            color: #111;
+            font-weight: 500;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}

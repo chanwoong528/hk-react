@@ -1,49 +1,32 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Card } from "./Card";
-import {
-  NEWSLETTER_LIST,
-  NEWSLETTER_STATUS,
-} from "../pages/newsletter/NEWSLETTERCODE";
+import { Table } from "./Table";
+
+import { NEWSLETTER_TABLE_FORMAT } from "../pages/newsletter/NEWSLETTERCODE";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Example/Card",
-  component: Card,
+  title: "Example/Table",
+  component: Table,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: "centered",
+    layout: "padded",
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {},
-} satisfies Meta<typeof Card>;
+} satisfies Meta<typeof Table>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const NewsLetterCard: Story = {
+export const NewsLetterTimeTable: Story = {
   args: {
-    ...NEWSLETTER_LIST[0],
-  },
-};
-
-export const NewsLetterCardFinished: Story = {
-  args: {
-    ...NEWSLETTER_LIST.find(
-      (item) => item.listType === NEWSLETTER_STATUS.FINISHED
-    ),
-    status: NEWSLETTER_STATUS.FINISHED,
-  },
-};
-export const NewsLetterCardSubscribed: Story = {
-  args: {
-    ...NEWSLETTER_LIST.find(
-      (item) => item.listType === NEWSLETTER_STATUS.FINISHED
-    ),
-    status: NEWSLETTER_STATUS.SUBSCRIBED,
+    type: "newsletter",
+    tableData: NEWSLETTER_TABLE_FORMAT.tableData,
+    numListToShow: NEWSLETTER_TABLE_FORMAT.numListToShow,
   },
 };
 

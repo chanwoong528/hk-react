@@ -68,6 +68,7 @@
           color: #333;
           border-color: #333;
         }
+
         &.subs-btn {
           color: #3ca488;
           border-color: #3ca488;
@@ -79,6 +80,7 @@
               background-size: 100%;
             }
           }
+
           &::after {
             content: "";
             display: inline-block;
@@ -88,6 +90,17 @@
             background: url("./assets/icon/icon_subsc.svg") no-repeat;
             background-size: 100%;
             vertical-align: 1px;
+          }
+          &.subscribed {
+            color: #fff;
+            background-color: #3ca488;
+            &::after {
+              width: 14px;
+              height: 14px;
+              background: url("./assets/icon/icon_subsc_chk.svg") no-repeat;
+              background-size: 100%;
+              vertical-align: -2px;
+            }
           }
         }
       }

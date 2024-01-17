@@ -3,9 +3,7 @@
     position: relative;
     margin: 0 0 16px;
     padding-top: 12px;
-    font-size: 26px;
-    font-weight: 500;
-    color: #111;
+
     &::after {
       content: "";
       position: absolute;
@@ -24,9 +22,29 @@
       height: 3px;
       background: #3ca488;
     }
+    h2 {
+      font-size: 26px;
+      font-weight: 500;
+      color: #111;
+    }
+    .sub-title {
+      padding-left: 2px;
+      color: #666;
+      font-size: 16px;
+    }
     &.finished {
       &::before {
         background: #999;
+      }
+    }
+    &.table {
+      display: flex;
+      align-items: center;
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
       }
     }
   }
