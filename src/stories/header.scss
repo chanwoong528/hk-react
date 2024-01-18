@@ -22,16 +22,21 @@
       height: 3px;
       background: #3ca488;
     }
-    h2 {
-      font-size: 26px;
-      font-weight: 500;
-      color: #111;
+    .title-wrap {
+      display: flex;
+      align-items: center;
+      h2 {
+        font-size: 26px;
+        font-weight: 500;
+        color: #111;
+      }
+      .sub-title {
+        padding-left: 2px;
+        color: #666;
+        font-size: 16px;
+      }
     }
-    .sub-title {
-      padding-left: 2px;
-      color: #666;
-      font-size: 16px;
-    }
+
     &.finished {
       &::before {
         background: #999;
@@ -45,6 +50,20 @@
       }
       &::after {
         display: none;
+      }
+    }
+  }
+
+  &--main-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0 20px;
+    .title-wrap {
+      h2 {
+        line-height: 20px;
+        font-size: 21px;
+        font-weight: 400;
+        color: #111;
       }
     }
   }

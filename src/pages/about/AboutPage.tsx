@@ -4,7 +4,7 @@ import { Button } from '../../stories/Button'
 const AboutPage = () => {
   return (
     <div>AboutPage
-      <Button label='about page' backgroundColor='red' />
+      <Button title='about page' backgroundColor='red' />
 
 
     </div>

@@ -1,0 +1,47 @@
+.dim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.hk-modal {
+  &--default {
+    margin-left: -140px;
+    width: 280px;
+    padding: 30px 30px 35px;
+    background: #fff;
+    -webkit-box-shadow: 0 4px 11px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 11px 4px rgba(0, 0, 0, 0.1);
+    z-index: 110;
+    text-align: left;
+    line-height: 1.125;
+    .hk-modal-title {
+      display: block;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: -1px;
+      color: #111;
+      font-weight: 500;
+    }
+
+    .hk-modal-content {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.5px;
+    }
+    .hk-modal-btn-con {
+      display: flex;
+      margin-top: 20px;
+      text-align: right;
+      font-size: 0;
+    }
+  }
+}

@@ -25,16 +25,16 @@ export const Table = ({ type = "newletter", numListToShow = 3, tableData, ...pro
   return (
     <div className={[`hk-table hk-table--${type}`].join(" ")} {...props}>
       {tableData.map((item) => {
-        return <div className={`day-wrap ${item.dayCode}`}>
+        return <div className={`day-wrap ${item.dayCode}`} key={item.dayCode}>
           <h3>{item.dateLabel}</h3>
-          <ul>{item.newsletterList.map((news) => {
+          <ul>{item.newsletterList.map((news, idx) => {
             if (!!news.name && !!news.time) {
-              return <li>
+              return <li key={item.dayCode + news.name}>
                 <span>{news.time}</span>
                 <h4>{news.name}</h4>
               </li>
             }
-            return <li></li>
+            return <li key={item.dayCode + idx}></li>
           })}</ul>
         </div>
       })}

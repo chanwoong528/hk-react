@@ -25,6 +25,17 @@ export default defineConfig({
   root,
   publicDir: "../public",
   plugins: [react(), cssInjectedByJsPlugin({ relativeCSSInjection: true })],
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:5173/NewsLetter/NewsJam",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+        secure: false,
+        ws: true,
+      },
+    },
+  },
   css: {
     preprocessorOptions: {
       scss: {
@@ -37,7 +48,7 @@ export default defineConfig({
     outDir,
     copyPublicDir: true,
     emptyOutDir: true,
-    preserveModules: true,
+    preserveModules: false,
     rollupOptions: {
       input: { main: resolve(root, "index.html"), ...PG_LIST },
       output: {

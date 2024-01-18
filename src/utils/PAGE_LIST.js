@@ -9,4 +9,8 @@ export const PAGE_LIST = [
     label: "newsletter",
     url: `${DEFAULT_HREF}newsletter/`,
   },
+  {
+    label: "newsletterMain",
+    url: `${DEFAULT_HREF}newsletterMain/`,
+  },
 ];

@@ -117,4 +117,56 @@
       }
     }
   }
+
+  &--main-newsletter {
+    width: 320px;
+    .innerlink {
+      display: flex;
+      .img-side-txt {
+        display: flex;
+        padding-right: 16px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        .sub-tit {
+          line-height: 21px;
+          font-size: 18px;
+          font-weight: 600;
+          color: #111;
+        }
+        .para {
+          width: 240px;
+          margin-top: 4px;
+          line-height: 23px;
+          font-size: 15px;
+          font-weight: 400;
+          color: #666;
+        }
+        .date-info {
+          margin-top: 8px;
+          line-height: 22px;
+          font-size: 14px;
+          font-weight: 400;
+          color: #02a37f;
+        }
+      }
+      .img-box {
+        margin-left: auto;
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        overflow: hidden;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        background: #eee;
+        img {
+          display: block;
+          width: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }

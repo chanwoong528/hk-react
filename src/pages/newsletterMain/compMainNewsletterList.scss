@@ -1,0 +1,18 @@
+// .imp-main .main .part-divide {
+//   border-top: 1px solid #111;
+// }
+// .main-newsletter-section {
+//   border-top: 1px solid #111;
+//   position: relative;
+//   margin: 0 auto;
+//   margin-top: 100px;
+//   width: 100%;
+//   max-width: 1200px;
+
+.main-section-newsletter-list {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 26px 96px;
+}
+// }

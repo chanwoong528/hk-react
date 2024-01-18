@@ -19,10 +19,13 @@ interface ButtonProps {
   /**
    * Button contents
    */
-  label: string;
+  title?: string;
+  btnType?: "nothing" | "link"
+  linkHref?: string
   /**
    * Optional click handler
    */
+
   onClick?: () => void;
 }
 
@@ -33,18 +36,32 @@ export const Button = ({
   primary = false,
   size = 'medium',
   backgroundColor,
-  label,
+  title,
+  btnType,
+  linkHref,
+
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return (
-    <button
+  const mode = primary ? 'hk-button--primary' : 'hk-button--secondary';
+  if (btnType === "link") {
+    return <a
+      href={linkHref}
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={['hk-button', `hk-button--${size}`, mode, btnType].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >
-      {label}
+      {title}
+    </a>
+  }
+  return (
+    <button
+      type="button"
+      className={['hk-button', `hk-button--${size}`, mode, btnType].join(' ')}
+      style={{ backgroundColor }}
+      {...props}
+    >
+      {title}
     </button>
   );
 };
